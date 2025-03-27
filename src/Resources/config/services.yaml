@@ -1,0 +1,15 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    Flowy\DynamicBundle\:
+        resource: '../../../src'
+        exclude:
+            - '../../../src/DependencyInjection/'
+            - '../../../src/Entity/'
+            - '../../../src/Resources/'
+
+    Flowy\CoreBundle\Context\ClientContext:
+        class: Flowy\DynamicBundle\Context\ClientContext

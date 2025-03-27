@@ -1,0 +1,31 @@
+{
+    "name": "flowy/dynamic-bundle",
+    "type": "symfony-bundle",
+    "description": "Authentication bundle for Flowy",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.2",
+        "symfony/framework-bundle": "^7.0",
+        "cycle/orm": "^2.10",
+        "cycle/annotated": "^4.2",
+        "flowy/core-bundle": "dev-main"
+    },
+    "autoload": {
+        "psr-4": {
+            "Flowy\\DynamicBundle\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.0-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../core-bundle"
+        }
+    ]
+}
